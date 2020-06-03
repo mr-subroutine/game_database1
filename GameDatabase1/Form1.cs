@@ -31,14 +31,6 @@ namespace GameDatabase1
             listView1.Columns.Add("Platform", 200, HorizontalAlignment.Left);
             listView1.Columns.Add("Release Year", 100, HorizontalAlignment.Left);
 
-            // disables form until user makes decision from opening dialog
-            listView1.Enabled = false;
-
-        }
-
-        private void Form1_Activated(object sender, EventArgs e)
-        {
-            // opens dialog that allows user to choose new or load
             startUpDialog();
         }
 
@@ -48,8 +40,15 @@ namespace GameDatabase1
             DialogResult r = startUpBox.ShowDialog();
 
             if (r == DialogResult.OK)
-            {
-                listView1.Enabled = true;
+            { 
+                string StartupPath = Application.StartupPath;
+                string fileLocation = StartupPath + @"\game_list.txt";
+
+                // checks if file exists 
+                if (File.Exists(fileLocation))
+                {
+                    File.Delete(fileLocation);
+                }
 
             }
         }

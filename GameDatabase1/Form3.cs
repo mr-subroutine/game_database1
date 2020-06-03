@@ -16,5 +16,11 @@ namespace GameDatabase1
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // close all windows if this is canceled.
+            Environment.Exit(0);
+        }
     }
 }
