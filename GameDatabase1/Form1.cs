@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GameDatabase1
 {
@@ -17,12 +18,14 @@ namespace GameDatabase1
             InitializeComponent();
         }
 
+        protected string[,] gameLibrary = new string[10000, 6];
+
         private void Form1_Load(object sender, EventArgs e)
         {
             listView1.Clear();
-            listView1.Columns.Add("Game Title", 200, HorizontalAlignment.Left);
-            listView1.Columns.Add("Publisher", 200, HorizontalAlignment.Left);
-            listView1.Columns.Add("Platform", 200, HorizontalAlignment.Left);
+            listView1.Columns.Add("Game Title", 225, HorizontalAlignment.Left);
+            listView1.Columns.Add("Publisher", 225, HorizontalAlignment.Left);
+            listView1.Columns.Add("Platform", 225, HorizontalAlignment.Left);
             listView1.Columns.Add("Release Year", 100, HorizontalAlignment.Left);
         }
 
@@ -33,66 +36,29 @@ namespace GameDatabase1
 
         private void addGame()
         {
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    ListViewItem x = new ListViewItem();
-            //    x.Text = "test";
-            //    x.SubItems.Add(i.ToString());
-            //    listView1.Items.Add(x);
-            //}
-
-            Game game = new Game();
             Form2 frm2 = new Form2();
+            DialogResult r = frm2.ShowDialog();
 
-            frm2.ShowDialog();
-
-            bool isEmpty = false;
-
-            while (isEmpty == false)
-            {
-                game.GameTitle = Microsoft.VisualBasic.Interaction.InputBox("Please Type in Full Game Title", "Enter Name of Game");
-                isEmpty = checkForEmpty(game.GameTitle);
-                if (isEmpty == true)
-                {
-                    break;
-                }
-                string developerName = Microsoft.VisualBasic.Interaction.InputBox("Please type in Full Game Developer", "Enter Name of the Developer");
-                isEmpty = checkForEmpty(developerName);
-                if (isEmpty == true)
-                {
-                    break;
-                }
-
-                string publisherName = Microsoft.VisualBasic.Interaction.InputBox("Please type in Full Game Publisher", "Enter Name of the Developer");
-                isEmpty = checkForEmpty(publisherName);
-                if (isEmpty == true)
-                {
-                    break;
-                }
-
-                string platformName = Microsoft.VisualBasic.Interaction.InputBox("Please type in Full Game Publisher", "Enter Name of the Developer");
-                isEmpty = checkForEmpty(platformName);
-                if (isEmpty == true)
-                {
-                    break;
-                }
-
+            if (r == DialogResult.OK)
+            { 
+                ListViewItem item = new ListViewItem();
+                item.Text = Game.gameTitle;
+                item.SubItems.Add(Game.gameDeveloper);
+                item.SubItems.Add(Game.gamePublisher);
+                item.SubItems.Add(Game.platformName);
+                item.SubItems.Add(Game.releaseYear);
+                listView1.Items.Add(item);
             }
-
-            MessageBox.Show("Left while loop.");
-            string releaseYear = Microsoft.VisualBasic.Interaction.InputBox("Please Enter Year", "Enter Year of Release (Ex. 1999");
         }
 
-        private bool checkForEmpty (string entry)
+        private void button4_Click(object sender, EventArgs e)
         {
-            bool isEmpty = false;
-            if (entry == "")
-            {
-                isEmpty = true;
-                return isEmpty;
-            }
-
-            return isEmpty = false;
+            this.Close();
         }
+
+        // WIP - Store data in array
+        // WIP - Remove item from list and also array
+        // WIP - Write to a file
+        // WIP - Read file and fill ListView
     }
 }

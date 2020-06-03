@@ -31,5 +31,30 @@ namespace GameDatabase1
             }
             comboBox5.SelectedIndex = 0;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Game.gameTitle = textBox1.Text;
+            Game.gameDeveloper = comboBox1.Text;
+            Game.gamePublisher = comboBox2.Text;
+            Game.platformName = comboBox3.Text;
+            Game.releaseYear = comboBox5.Text;
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Game.gameTitle == "" || Game.gameDeveloper == "" || Game.gamePublisher == "" || Game.platformName == ""
+                || Game.releaseYear == "--")
+            {
+                MessageBox.Show("Please make sure all fields are filled in.");
+                e.Cancel = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            GC.Collect();
+        }
     }
 }

@@ -4,91 +4,16 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameDatabase1
 {
-    class Game
+    public static class Game
     {
-        private string gameTitle;
-        private string gameDeveloper;
-        private string gamePublisher;
-        private string platformName;
-        private int releaseYear;
-
-        public Game()
-        {
-
-        }
-
-        ~Game()
-        {
-
-        }
-
-        public string GameTitle
-        {
-            get
-            {
-                return gameTitle;
-            }
-
-            set
-            {
-                this.gameTitle = value;
-            }
-        }
-
-        public string GameDeveloper
-        {
-            get
-            {
-                return gameDeveloper;
-            }
-
-            set
-            {
-                this.gameDeveloper = value;
-            }
-        }
-
-        public string GamePublisher
-        {
-            get
-            {
-                return gamePublisher;
-            }
-
-            set
-            {
-                this.gamePublisher = value;
-            }
-        }
-
-        public string PlatformName
-        {
-            get
-            {
-                return platformName;
-            }
-
-            set
-            {
-                this.platformName = value;
-            }
-        }
-
-        public int ReleaseYear
-        {
-            get
-            {
-                return releaseYear;
-            }
-
-            set
-            {
-                this.releaseYear = value;
-            }
-        }
-
+        public static string gameTitle { get; set; }
+        public static string gameDeveloper { get; set; }
+        public static string gamePublisher { get; set; }
+        public static string platformName { get; set; }
+        public static string releaseYear { get; set; }
     }
 }
