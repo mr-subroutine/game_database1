@@ -36,17 +36,16 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sotByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.publisherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.platformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releaseYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +59,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(975, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1142, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,6 +103,7 @@
             // 
             this.sotByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameTitleToolStripMenuItem,
+            this.developerToolStripMenuItem,
             this.publisherToolStripMenuItem,
             this.platformToolStripMenuItem,
             this.releaseYearToolStripMenuItem,
@@ -116,7 +116,13 @@
             // 
             this.gameTitleToolStripMenuItem.Name = "gameTitleToolStripMenuItem";
             this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.gameTitleToolStripMenuItem.Text = "Game Title";
+            this.gameTitleToolStripMenuItem.Text = "Title";
+            // 
+            // developerToolStripMenuItem
+            // 
+            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.developerToolStripMenuItem.Text = "Developer";
             // 
             // publisherToolStripMenuItem
             // 
@@ -156,18 +162,9 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(811, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Borrowed";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(811, 27);
+            this.button2.Location = new System.Drawing.Point(989, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 36);
             this.button2.TabIndex = 2;
@@ -177,7 +174,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(811, 69);
+            this.button3.Location = new System.Drawing.Point(989, 69);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 36);
             this.button3.TabIndex = 3;
@@ -186,7 +183,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(811, 524);
+            this.button4.Location = new System.Drawing.Point(989, 524);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 36);
             this.button4.TabIndex = 5;
@@ -194,22 +191,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(811, 482);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Save Library";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // listView1
             // 
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 27);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(771, 533);
+            this.listView1.Size = new System.Drawing.Size(963, 533);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -219,20 +207,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(975, 572);
+            this.ClientSize = new System.Drawing.Size(1142, 572);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Library v0.1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -247,11 +235,9 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sotByToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gameTitleToolStripMenuItem;
@@ -262,6 +248,7 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
     }
 }
 
