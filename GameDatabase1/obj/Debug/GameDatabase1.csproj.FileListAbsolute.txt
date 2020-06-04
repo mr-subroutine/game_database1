@@ -9,3 +9,4 @@ C:\Users\gamef\source\repos\GameDatabase1\GameDatabase1\obj\Debug\GameDatabase1.
 C:\Users\gamef\source\repos\GameDatabase1\GameDatabase1\obj\Debug\GameDatabase1.pdb
 C:\Users\gamef\source\repos\GameDatabase1\GameDatabase1\obj\Debug\GameDatabase1.Form2.resources
 C:\Users\gamef\source\repos\GameDatabase1\GameDatabase1\obj\Debug\GameDatabase1.Form3.resources
+C:\Users\gamef\source\repos\GameDatabase1\GameDatabase1\obj\Debug\GameDatabase1.csprojAssemblyReference.cache
