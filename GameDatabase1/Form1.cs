@@ -71,21 +71,21 @@ namespace GameDatabase1
                 // checks if file exists after selecting create new, confirmation for a destructive action
                 if (File.Exists(fileLocation))
                 {
-                    DialogResult dialogResult = MessageBox.Show("A database file already exists. Do you want to delete it and create a new one?",
+                    DialogResult dialogResult = MessageBox.Show("A database file already exists. Continue Using Current Database? YES - Create New File: NO?",
                         "Yes or No", MessageBoxButtons.YesNo);
 
-                    // YES - create new file and app creates new file
+                    // NO - Loads current file for new additions
                     if (dialogResult == DialogResult.Yes)
+                    {
+                        readFile();
+                    }
+
+                    // NO - create new file 
+                    else if (dialogResult == DialogResult.No)
                     {
                         appCreatedFile = true;
                         setFileLocation(appCreatedFile);
                         createFile();
-                    }
-
-                    // NO - loads the file already onhand, needs to check if one exists and if so creates a new one anyway.
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        readFile();
                     }
                 }
 
