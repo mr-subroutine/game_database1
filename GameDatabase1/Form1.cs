@@ -31,7 +31,7 @@ namespace GameDatabase1
             listView1.Columns.Add("Developer", 215, HorizontalAlignment.Left);
             listView1.Columns.Add("Publisher", 215, HorizontalAlignment.Left);
             listView1.Columns.Add("Platform", 200, HorizontalAlignment.Left);
-            listView1.Columns.Add("Release Year", 100, HorizontalAlignment.Left);
+            listView1.Columns.Add("Release Year", 80, HorizontalAlignment.Left);
 
             // needs to set initial file location for opening dialog to check if it exists
             StartupPath = Application.StartupPath;

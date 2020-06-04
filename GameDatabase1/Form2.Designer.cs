@@ -53,6 +53,7 @@
             // 
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
@@ -131,6 +132,7 @@
             "Monolith Productions",
             "N/A",
             "Namco",
+            "Naughty Dog",
             "NEC",
             "Nintendo",
             "Origin",
@@ -138,6 +140,7 @@
             "PlayStation Game Studios",
             "Pokemon Company",
             "Polyphony Digital",
+            "Project Aces",
             "RARE",
             "Rational Games",
             "Redwood Studios",
@@ -183,6 +186,7 @@
             // 
             this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
             this.comboBox2.Items.AddRange(new object[] {
@@ -262,6 +266,8 @@
             "Monolith Productions",
             "N/A",
             "Namco",
+            "Naughty Dog",
+            "Project Aces",
             "NEC",
             "Nintendo",
             "Origin",
@@ -312,6 +318,7 @@
             // 
             this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
             this.comboBox3.Items.AddRange(new object[] {
@@ -363,6 +370,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.IntegralHeight = false;
             this.comboBox5.ItemHeight = 13;
