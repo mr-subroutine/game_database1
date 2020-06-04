@@ -76,7 +76,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Start";
+            this.Text = "Game Tracker";
             this.ResumeLayout(false);
 
         }
