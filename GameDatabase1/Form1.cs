@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 // written by: Darryl
 
+// WIP - Work on line 110 reading the loaded file from form 3
+// WIP - Work on properties for dialog box to make it return to StartUp path instead of recent.
+
 namespace GameDatabase1
 {
     public partial class Form1 : Form
@@ -46,7 +49,9 @@ namespace GameDatabase1
             // sets the location that the application will use
             if (appCreatedFile == false)
             {
-                // user file location needed here
+                // copy loaded file to gamelist file the program accepts
+                File.Delete(fileLocation);
+                File.Copy(Form3.filePath, fileLocation);
             }
 
             else if (appCreatedFile == true)
@@ -63,7 +68,6 @@ namespace GameDatabase1
 
         private void startUpDialog()
         {
-            appCreatedFile = false;
             Form3 startUpBox = new Form3();
             DialogResult r = startUpBox.ShowDialog();
 
@@ -97,6 +101,13 @@ namespace GameDatabase1
                     createFile();
                 }
             }
+
+            if (r == DialogResult.Yes)
+            {
+                appCreatedFile = false;
+                setFileLocation(appCreatedFile);
+                readFile();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -122,7 +133,6 @@ namespace GameDatabase1
 
                 // Call to write the added game to file
                 writeFile(Game.gameTitle, Game.gameDeveloper, Game.gamePublisher, Game.platformName, Game.releaseYear);
-
             }
         }
 
@@ -144,8 +154,7 @@ namespace GameDatabase1
                     item.Text = read.ReadLine();
                     if (item.Text == null || item.Text == "")
                     {
-                        // breaks out if loop and reading of array if it encounters a null or empty line.
-                        // if not it will continue and fill the listview with blank lines
+                        // breaks out if loop if null or empty line.  If not it will continue and fill the listview with blank lines
                         break;
                     }
                     item.SubItems.Add(read.ReadLine());
@@ -153,8 +162,8 @@ namespace GameDatabase1
                     item.SubItems.Add(read.ReadLine());
                     item.SubItems.Add(read.ReadLine());
                     listView1.Items.Add(item);
-
                 }
+
                 read.Close();
             }
         }

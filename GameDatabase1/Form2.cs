@@ -17,11 +17,6 @@ namespace GameDatabase1
             InitializeComponent();
         }
 
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             comboBox5.Items.Add("--");
@@ -47,7 +42,8 @@ namespace GameDatabase1
                 || Game.releaseYear == "--")
             {
                 MessageBox.Show("Please make sure all fields are filled in.");
-                e.Cancel = true;
+                
+
             }
 
             GC.Collect();
