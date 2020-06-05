@@ -49,11 +49,7 @@ namespace GameDatabase1
                 MessageBox.Show("Please make sure all fields are filled in.");
                 e.Cancel = true;
             }
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
             GC.Collect();
         }
     }

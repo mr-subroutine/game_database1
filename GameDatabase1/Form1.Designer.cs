@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sotByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +39,6 @@
             this.publisherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.platformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releaseYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
@@ -67,7 +65,6 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadToolStripMenuItem,
-            this.saveFileToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
@@ -76,19 +73,13 @@
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load File";
-            // 
-            // saveFileToolStripMenuItem
-            // 
-            this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.saveFileToolStripMenuItem.Text = "Save File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // viewToolStripMenuItem
@@ -106,47 +97,40 @@
             this.developerToolStripMenuItem,
             this.publisherToolStripMenuItem,
             this.platformToolStripMenuItem,
-            this.releaseYearToolStripMenuItem,
-            this.borrowStatusToolStripMenuItem});
+            this.releaseYearToolStripMenuItem});
             this.sotByToolStripMenuItem.Name = "sotByToolStripMenuItem";
-            this.sotByToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.sotByToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sotByToolStripMenuItem.Text = "Sort By";
             // 
             // gameTitleToolStripMenuItem
             // 
             this.gameTitleToolStripMenuItem.Name = "gameTitleToolStripMenuItem";
-            this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gameTitleToolStripMenuItem.Text = "Title";
             // 
             // developerToolStripMenuItem
             // 
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.developerToolStripMenuItem.Text = "Developer";
             // 
             // publisherToolStripMenuItem
             // 
             this.publisherToolStripMenuItem.Name = "publisherToolStripMenuItem";
-            this.publisherToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.publisherToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.publisherToolStripMenuItem.Text = "Publisher";
             // 
             // platformToolStripMenuItem
             // 
             this.platformToolStripMenuItem.Name = "platformToolStripMenuItem";
-            this.platformToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.platformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.platformToolStripMenuItem.Text = "Platform";
             // 
             // releaseYearToolStripMenuItem
             // 
             this.releaseYearToolStripMenuItem.Name = "releaseYearToolStripMenuItem";
-            this.releaseYearToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.releaseYearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.releaseYearToolStripMenuItem.Text = "Release Year";
-            // 
-            // borrowStatusToolStripMenuItem
-            // 
-            this.borrowStatusToolStripMenuItem.Name = "borrowStatusToolStripMenuItem";
-            this.borrowStatusToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.borrowStatusToolStripMenuItem.Text = "Borrow Status";
             // 
             // helpToolStripMenuItem
             // 
@@ -159,7 +143,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // button2
@@ -243,9 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem publisherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem platformToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releaseYearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem borrowStatusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
     }

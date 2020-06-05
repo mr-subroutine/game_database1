@@ -22,5 +22,12 @@ namespace GameDatabase1
             // close all windows if this is canceled.
             Environment.Exit(0);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult r = openFileDialog1.ShowDialog();
+
+
+        }
     }
 }

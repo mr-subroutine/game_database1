@@ -72,10 +72,10 @@ namespace GameDatabase1
                 // checks if file exists after selecting create new, confirmation for a destructive action
                 if (File.Exists(fileLocation))
                 {
-                    DialogResult dialogResult = MessageBox.Show("A database file already exists. Continue Using Current Database? YES - Create New File: NO?",
+                    DialogResult dialogResult = MessageBox.Show("Use Current Database? YES | New File? NO?",
                         "Yes or No", MessageBoxButtons.YesNo);
 
-                    // NO - Loads current file for new additions
+                    // YES - Loads current file for new additions
                     if (dialogResult == DialogResult.Yes)
                     {
                         readFile();
@@ -122,6 +122,7 @@ namespace GameDatabase1
 
                 // Call to write the added game to file
                 writeFile(Game.gameTitle, Game.gameDeveloper, Game.gamePublisher, Game.platformName, Game.releaseYear);
+
             }
         }
 
@@ -137,16 +138,22 @@ namespace GameDatabase1
             using (StreamReader read = new StreamReader(fileLocation))
             {
                 // read line add to ListView
-
                 for (int j = 0; j < dataArr.Length; j++)
                 {
                     ListViewItem item = new ListViewItem();
                     item.Text = read.ReadLine();
+                    if (item.Text == null || item.Text == "")
+                    {
+                        // breaks out if loop and reading of array if it encounters a null or empty line.
+                        // if not it will continue and fill the listview with blank lines
+                        break;
+                    }
                     item.SubItems.Add(read.ReadLine());
                     item.SubItems.Add(read.ReadLine());
                     item.SubItems.Add(read.ReadLine());
                     item.SubItems.Add(read.ReadLine());
                     listView1.Items.Add(item);
+
                 }
                 read.Close();
             }
