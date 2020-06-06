@@ -30,7 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sotByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +44,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,23 +64,17 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem1.Text = "File";
-            // 
-            // loadToolStripMenuItem
-            // 
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loadToolStripMenuItem.Text = "Load File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -99,37 +93,37 @@
             this.platformToolStripMenuItem,
             this.releaseYearToolStripMenuItem});
             this.sotByToolStripMenuItem.Name = "sotByToolStripMenuItem";
-            this.sotByToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sotByToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.sotByToolStripMenuItem.Text = "Sort By";
             // 
             // gameTitleToolStripMenuItem
             // 
             this.gameTitleToolStripMenuItem.Name = "gameTitleToolStripMenuItem";
-            this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.gameTitleToolStripMenuItem.Text = "Title";
             // 
             // developerToolStripMenuItem
             // 
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.developerToolStripMenuItem.Text = "Developer";
             // 
             // publisherToolStripMenuItem
             // 
             this.publisherToolStripMenuItem.Name = "publisherToolStripMenuItem";
-            this.publisherToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.publisherToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.publisherToolStripMenuItem.Text = "Publisher";
             // 
             // platformToolStripMenuItem
             // 
             this.platformToolStripMenuItem.Name = "platformToolStripMenuItem";
-            this.platformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.platformToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.platformToolStripMenuItem.Text = "Platform";
             // 
             // releaseYearToolStripMenuItem
             // 
             this.releaseYearToolStripMenuItem.Name = "releaseYearToolStripMenuItem";
-            this.releaseYearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.releaseYearToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.releaseYearToolStripMenuItem.Text = "Release Year";
             // 
             // helpToolStripMenuItem
@@ -143,7 +137,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // button2
@@ -186,6 +180,10 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,9 +225,9 @@
         private System.Windows.Forms.ToolStripMenuItem publisherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem platformToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releaseYearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
