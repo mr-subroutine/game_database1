@@ -12,9 +12,6 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 // written by: Darryl
 
-// WIP - Work on line 110 reading the loaded file from form 3
-// WIP - Work on properties for dialog box to make it return to StartUp path instead of recent.
-
 namespace GameDatabase1
 {
     public partial class Form1 : Form
@@ -164,7 +161,6 @@ namespace GameDatabase1
                     item.SubItems.Add(read.ReadLine());
                     listView1.Items.Add(item);
                 }
-
                 read.Close();
             }
         }

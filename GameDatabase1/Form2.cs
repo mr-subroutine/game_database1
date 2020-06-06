@@ -17,6 +17,8 @@ namespace GameDatabase1
             InitializeComponent();
         }
 
+        bool allConfirmed = true;
+
         private void Form2_Load(object sender, EventArgs e)
         {
             comboBox5.Items.Add("--");
@@ -34,19 +36,34 @@ namespace GameDatabase1
             Game.gamePublisher = comboBox2.Text;
             Game.platformName = comboBox3.Text;
             Game.releaseYear = comboBox5.Text;
+
+            if (Game.gameTitle == "" || Game.gameDeveloper == "" || Game.gamePublisher == "" || Game.platformName == ""
+                || Game.releaseYear == "--")
+            {
+                allConfirmed = false;
+                MessageBox.Show("Please make sure all fields are filled in.");
+            }
+
+            else if (Game.gameTitle != "" || Game.gameDeveloper != "" || Game.gamePublisher != "" || Game.platformName != ""
+                || Game.releaseYear != "--")
+            {
+                allConfirmed = true;
+            }
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Game.gameTitle == "" || Game.gameDeveloper == "" || Game.gamePublisher == "" || Game.platformName == ""
-                || Game.releaseYear == "--")
-            {
-                MessageBox.Show("Please make sure all fields are filled in.");
-                
 
+            if (allConfirmed == false)
+            {
+                e.Cancel = true;
+                allConfirmed = true;
             }
 
-            GC.Collect();
+            else if (allConfirmed == true)
+            {
+                GC.Collect();
+            }
         }
     }
 }
