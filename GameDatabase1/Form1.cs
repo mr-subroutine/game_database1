@@ -130,7 +130,7 @@ namespace GameDatabase1
                 listView1.Items.Add(item);
 
                 // Call to write the added game to file
-                writeFile(Game.gameTitle, Game.gameDeveloper, Game.gamePublisher, Game.platformName, Game.releaseYear);
+                writeObjToFile(Game.gameTitle, Game.gameDeveloper, Game.gamePublisher, Game.platformName, Game.releaseYear);
             }
         }
 
@@ -165,7 +165,7 @@ namespace GameDatabase1
             }
         }
 
-        private void writeFile(string gTitle, string gDev, string gPublish, string gPlat, string gYear)
+        private void writeObjToFile(string gTitle, string gDev, string gPublish, string gPlat, string gYear)
         {
             // Write this data to a file(append)
             using (System.IO.StreamWriter file =
@@ -179,9 +179,39 @@ namespace GameDatabase1
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string[] lines = System.IO.File.ReadAllLines(@fileLocation);
+
+            foreach (ListViewItem listItem in listView1.SelectedItems)
+            {
+                // stores list view item in a string
+                string lineforDel = listItem.Text;
+                // deletes the specified list view item
+                listView1.Items.Remove(listItem);
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lineforDel == lines[i])
+                    {
+                        lines[i] = "";
+                        lines[i + 1] = "";
+                        lines[i + 2] = "";
+                        lines[i + 3] = "";
+                        lines[i + 4] = "";
+                    }
+                }
+                //  clear list view
+                listView1.Items.Clear();
+
+                // WIP: re-read files and display into listview, send array to readFile (optional params?)
+                readFile();
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
     }
 }
+
