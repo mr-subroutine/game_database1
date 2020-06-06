@@ -37,6 +37,7 @@ namespace GameDatabase1
             {
                 FileName = "Select a text file",
                 Filter = "Text files (*.txt)|*.txt",
+                InitialDirectory = Application.StartupPath,
                 Title = "Open text file"
             };
 
