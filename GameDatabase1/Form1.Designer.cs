@@ -31,15 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sotByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gameTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.publisherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.platformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.releaseYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -52,9 +43,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.viewToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1142, 24);
@@ -75,70 +64,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sotByToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // sotByToolStripMenuItem
-            // 
-            this.sotByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gameTitleToolStripMenuItem,
-            this.developerToolStripMenuItem,
-            this.publisherToolStripMenuItem,
-            this.platformToolStripMenuItem,
-            this.releaseYearToolStripMenuItem});
-            this.sotByToolStripMenuItem.Name = "sotByToolStripMenuItem";
-            this.sotByToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.sotByToolStripMenuItem.Text = "Sort By";
-            // 
-            // gameTitleToolStripMenuItem
-            // 
-            this.gameTitleToolStripMenuItem.Name = "gameTitleToolStripMenuItem";
-            this.gameTitleToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.gameTitleToolStripMenuItem.Text = "Title";
-            // 
-            // developerToolStripMenuItem
-            // 
-            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.developerToolStripMenuItem.Text = "Developer";
-            // 
-            // publisherToolStripMenuItem
-            // 
-            this.publisherToolStripMenuItem.Name = "publisherToolStripMenuItem";
-            this.publisherToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.publisherToolStripMenuItem.Text = "Publisher";
-            // 
-            // platformToolStripMenuItem
-            // 
-            this.platformToolStripMenuItem.Name = "platformToolStripMenuItem";
-            this.platformToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.platformToolStripMenuItem.Text = "Platform";
-            // 
-            // releaseYearToolStripMenuItem
-            // 
-            this.releaseYearToolStripMenuItem.Name = "releaseYearToolStripMenuItem";
-            this.releaseYearToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.releaseYearToolStripMenuItem.Text = "Release Year";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // button2
             // 
@@ -177,6 +102,7 @@
             this.listView1.Location = new System.Drawing.Point(12, 27);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(942, 533);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -202,7 +128,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game Tracker v0.1";
+            this.Text = "Game Tracker v0.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -215,19 +141,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sotByToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gameTitleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem publisherToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem platformToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem releaseYearToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

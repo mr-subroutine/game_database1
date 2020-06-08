@@ -200,7 +200,7 @@ namespace GameDatabase1
                         lines[i + 4] = "";
                     }
                 }
-                //  clear list view
+                //  clear list-view display
                 listView1.Items.Clear();
 
                 // text file needs formatting before being put back into listview
@@ -214,8 +214,7 @@ namespace GameDatabase1
             // deleting old data file
             File.Delete(fileLocation);
 
-            // write text to file
-            // Write this data to a file(append)
+            // Write the newly adjusted array to a file, minus empty string items
             using (System.IO.StreamWriter file =
         new System.IO.StreamWriter(fileLocation, true))
             {
