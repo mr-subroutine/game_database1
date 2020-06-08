@@ -203,9 +203,32 @@ namespace GameDatabase1
                 //  clear list view
                 listView1.Items.Clear();
 
-                // WIP: re-read files and display into listview, send array to readFile (optional params?)
-                readFile();
+                // text file needs formatting before being put back into listview
+                reformatTextFile(lines);
             }
+        }
+
+        private void reformatTextFile(string[] lines)
+        {
+            // This method is used to reformat before being sent to readFile method.  Needs to get rid of empty string lines.
+            // deleting old data file
+            File.Delete(fileLocation);
+
+            // write text to file
+            // Write this data to a file(append)
+            using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(fileLocation, true))
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i] != "")
+                    {
+                        file.WriteLine(lines[i]);
+                    }
+                }
+            }
+            // call readFile to read the new text file made in this method
+            readFile();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
